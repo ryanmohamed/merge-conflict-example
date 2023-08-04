@@ -18,7 +18,12 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button className="btn" onClick={async () => {
+        
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+      <button className="btn" onClick={async () => {
           const res = await fetch("https://picsum.photos/v2/list", { method: "GET" })
           if (res.status !== 200) return;
           const data = await res.json(); // array of objects
@@ -31,10 +36,6 @@ function App() {
             <img className="img" src={image?.download_url} alt="image" key={idx}/>
           )) }
         </div>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
